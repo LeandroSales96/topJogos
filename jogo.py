@@ -17,9 +17,9 @@ def verificaFimJogo():
     return fim
 
 def retornaRastrosAtualizados(matrizRastros):
-    rastrosAtualizados = deepcopy(matrizRastros)
-    def subtrai1Array
-    return rastrosAtualizados
+    def subtrai1Array(array):
+        arrayMenos1 = map(lambda x : x - 1, array)
+    return map(lambda x : subtrai1Array(x), matrizRastros)
 
 def retornaMatrizAnimaisAtualizada(acoes, matrizAnimais):
     return matrizAnimaisAtualizada
