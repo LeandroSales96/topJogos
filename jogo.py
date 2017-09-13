@@ -18,9 +18,11 @@ def verificaFimJogo():
     fim = False 
     return fim
 
-def executaJogo():
-    while(not verificaFimJogo()):
+def atualizaMatrizes(self):
+
+def executaJogo(self):
+    while(not self.verificaFimJogo()):
         acoes = map(,animais)
-        atualizaAcoes()
+        self.atualizaMatrizes()
 
 
