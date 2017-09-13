@@ -30,9 +30,9 @@ class Peixe(pygame.sprite.Sprite):
         
             
         #nao deixar passar dos limites de Y
-        if self.rect.y > 641:
+        if self.rect.y > 641 | self.rect.y < 0:
             self.rect.y = 0
-        elif self.rect.x > 641:
+        elif self.rect.x > 641 | self.rect.x < 0:
             self.rect.x = 0
         elif self.rect.x > 641 & self.rect.y > 641:
             self.rect.x,self.rect.y = 0,0
