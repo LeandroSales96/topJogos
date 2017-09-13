@@ -1,10 +1,8 @@
 from graficos import Graficos
+from copy import deepcopy
 
 def __init__(self):
-    self.graficos =
-    self.animais = criaAnimaisInicial()
-    self.matrizAnimais = self.criaMatrizAnimaisInicial(animais)
-    self.matrizRastros = [[0]*64]*64
+    self.executaJogo()
 
 def criaAnimaisInicial():
     return animais
@@ -18,11 +16,24 @@ def verificaFimJogo():
     fim = False 
     return fim
 
-def atualizaMatrizes(self):
+def retornaRastrosAtualizados(matrizRastros):
+    rastrosAtualizados = deepcopy(matrizRastros)
+    def subtrai1Array
+    return rastrosAtualizados
+
+def retornaMatrizAnimaisAtualizada(acoes, matrizAnimais):
+    return matrizAnimaisAtualizada
 
 def executaJogo(self):
-    while(not self.verificaFimJogo()):
-        acoes = map(,animais)
-        self.atualizaMatrizes()
-
-
+    graficos =
+    animais = criaAnimaisInicial()
+    matrizAnimais = criaMatrizAnimaisInicial(animais)
+    matrizRastros = [[0]*64]*64
+    ambiente = (matrizAnimais,matrizRastros)
+    while(not self.verificaFimJogo(matrizAnimais)):
+        acoes = map(lambda x : x.acoesIntraBloco(ambiente) ,animais)
+        matrizAnimais = retornaMatrizAnimaisAtualizada(acoes,matrizAnimais)
+        matrizRastros = retornaRastrosAtualizados(matrizRastros)
+        acoes = map(lambda x : x.movimentar(ambiente) ,animais)
+        matrizAnimais = retornaMatrizAnimaisAtualizada(acoes,matrizAnimais)
+        matrizRastros = retornaRastrosAtualizados(matrizRastros)
