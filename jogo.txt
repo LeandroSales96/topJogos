@@ -1,0 +1,11 @@
+-jogo
+	-matriz objetos(tubarão peixe)
+
+
+-bichos
+	id = tempo
+	determinar lider ( se o lider for o proprio bicho ele deve mudar de estado para lider)
+	movimentar
+	complementarAcao
+
+
