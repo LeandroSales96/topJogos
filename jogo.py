@@ -38,17 +38,28 @@ def executaJogo(self):
     matrizAnimais = criaMatrizAnimaisInicial(animais)
     matrizRastros = [[0]*64]*64
     ambiente = (matrizAnimais, matrizRastros)
+    
+    #acoes = (action, idRel, x, y)
     def retornaIdsMortos(acoes):
-    def retornaIdsFecundados(acoes):
+    	#ver sintaxe dessa merda
+    	acoesMorte = filter(x.acao -> 'dye',acoes)
+    	ids = map((x) -> x.idRelacionado, acoesMorte)
+    	return ids
+
     def retornaOjtsNascidos(acoes):
+    	acoesNascimento = filter(x.acao -> 'born',acoes)
+    	ids = map((x) -> x.idRelacionado, acoesNascimento)
+    	return ids
+    
+    def recebeAcoesAtores(animais):
+    	
 
     while(not self.verificaFimJogo(matrizAnimais)):
         animaisProxRodada = deepcopy(animais)
         idsMortos = []
-        idsFecundados = []
         objtsNascidos = []
         for animal in animais:
-            acoes = animal.acoesIntraBloco(ambiente)
+            
 
 
         """
@@ -59,3 +70,22 @@ def executaJogo(self):
         matrizAnimais = retornaMatrizAnimaisAtualizada(acoes,matrizAnimais)
         matrizRastros = retornaRastrosAtualizados(matrizRastros)
         """
+        
+        """
+        no inicio os atores se acham na matriz, dps vao se auto atualizando
+        """
+
+        """
+        	trabalho raul
+
+        	escolher base de dados
+        		porquê
+        		caracteristicas
+
+        	definição do que fzr
+        		porque
+        		como pretende fzr
+
+        	terça
+        		fudeuuuu
+        """ 
